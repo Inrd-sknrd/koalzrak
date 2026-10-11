@@ -110,11 +110,11 @@ jobs:
           SKIP_PREPARE=1 pnpm install
           pnpm prepare --${{ matrix.arch }}
 
-      - name: Create Apple API Key file
-        if: startsWith(matrix.os, 'macos')
-        run: |
-          mkdir -p ~/.appstoreconnect/private_keys
-          echo "${{ secrets.APPLE_API_KEY_CONTENT }}" > ~/.appstoreconnect/private_keys/AuthKey_${{ secrets.APPLE_API_KEY }}.p8
+      # - name: Create Apple API Key file
+      #   if: startsWith(matrix.os, 'macos')
+      #   run: |
+      #     mkdir -p ~/.appstoreconnect/private_keys
+      #     echo "${{ secrets.APPLE_API_KEY_CONTENT }}" > ~/.appstoreconnect/private_keys/AuthKey_${{ secrets.APPLE_API_KEY }}.p8
 
       - name: Build
         env:
