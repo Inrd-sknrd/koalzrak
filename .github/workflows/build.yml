@@ -120,12 +120,13 @@ jobs:
         env:
           npm_config_arch: ${{ matrix.arch }}
           npm_config_target_arch: ${{ matrix.arch }}
-          CSC_LINK: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_CERTIFICATE || '' }}
-          CSC_KEY_PASSWORD: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_CERTIFICATE_PASSWORD || '' }}
-          CSC_NAME: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_SIGNING_IDENTITY || '' }}
-          APPLE_API_KEY_ID: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_API_KEY || '' }}
-          APPLE_API_ISSUER: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_API_ISSUER || '' }}
-          APPLE_API_KEY: ${{ startsWith(matrix.os, 'macos') && format('~/.appstoreconnect/private_keys/AuthKey_{0}.p8', secrets.APPLE_API_KEY) || '' }}
+          # CSC_LINK: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_CERTIFICATE || '' }}
+          # CSC_KEY_PASSWORD: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_CERTIFICATE_PASSWORD || '' }}
+          # CSC_NAME: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_SIGNING_IDENTITY || '' }}
+          # APPLE_API_KEY_ID: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_API_KEY || '' }}
+          # APPLE_API_ISSUER: ${{ startsWith(matrix.os, 'macos') && secrets.APPLE_API_ISSUER || '' }}
+          # APPLE_API_KEY: ${{ startsWith(matrix.os, 'macos') && format('~/.appstoreconnect/private_keys/AuthKey_{0}.p8', secrets.APPLE_API_KEY) || '' }}
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
         shell: bash
         run: |
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
