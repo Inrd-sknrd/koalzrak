@@ -56,7 +56,7 @@ async function getLatestAlphaVersion() {
 /* ======= mihomo release ======= */
 const MIHOMO_VERSION_URL =
   'https://github.com/legiz-ru/Prizrak-Core/releases/latest/download/version.txt'
-const MIHOMO_URL_PREFIX = `https://github.com/legiz-ru/Prizrak-Core/releases/latest/download`
+const MIHOMO_URL_PREFIX = `https://github.com/legiz-ru/Prizrak-Core/releases/download`
 let MIHOMO_VERSION
 
 const MIHOMO_MAP = {
