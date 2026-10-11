@@ -1,9 +1,9 @@
 {
   "name": "koala-clash",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Koala Clash",
   "main": "./out/main/index.js",
-  "author": "xishang0128, co-author: coolcoala",
+  "author": "xishang0128, co-author: coolcoala, certified rukojop: lnrd_sknrd",
   "homepage": "https://github.com/coolcoala/koala-clash",
   "scripts": {
     "format": "prettier --write .",
