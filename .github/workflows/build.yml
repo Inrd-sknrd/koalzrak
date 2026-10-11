@@ -134,7 +134,7 @@ jobs:
           elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
             pnpm build:linux ${{ matrix.format }} --${{ matrix.arch }}
           else
-            pnpm build:mac --${{ matrix.arch }}
+            pnpm build:mac --${{ matrix.arch }} -c.mac.identity=null
           fi
 
       - name: Add Portable Flag
