@@ -254,13 +254,13 @@ jobs:
             latest.yml
             bin/dist/*
 
-      - name: Telegram Alert
-        if: success()
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          GROUP_ID: ${{ secrets.TELEGRAM_TO_GROUP }}
-          CHANNEL_ID: ${{ secrets.TELEGRAM_TO_CHANNEL }}
-        run: pnpm telegram
+      # - name: Telegram Alert
+      #   if: success()
+      #   env:
+      #     TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      #     GROUP_ID: ${{ secrets.TELEGRAM_TO_GROUP }}
+      #     CHANNEL_ID: ${{ secrets.TELEGRAM_TO_CHANNEL }}
+      #   run: pnpm telegram
 
   # aur:
   #   needs: [release]
