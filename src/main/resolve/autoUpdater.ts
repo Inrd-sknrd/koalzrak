@@ -41,7 +41,7 @@ export async function checkUpdate(): Promise<AppVersion | undefined> {
 export async function downloadAndInstallUpdate(version: string): Promise<void> {
   const { 'mixed-port': mixedPort = 0 } = (await getRuntimeConfig()) ?? {}
   const releaseTag = version
-  const baseUrl = `https://github.com/coolcoala/koala-clash/releases/download/${releaseTag}/`
+  const baseUrl = `https://github.com/Inrd-sknrd/koalzrak/releases/download/${releaseTag}/`
   const fileMap = {
     'win32-x64': `Koala.Clash_x64-setup.exe`,
     'win32-arm64': `Koala.Clash_arm64-setup.exe`,
@@ -57,7 +57,7 @@ export async function downloadAndInstallUpdate(version: string): Promise<void> {
   }
   downloadCancelToken = axios.CancelToken.source()
 
-  const apiUrl = `https://api.github.com/repos/coolcoala/koala-clash/releases/tags/${releaseTag}`
+  const apiUrl = `https://api.github.com/repos/Inrd-sknrd/koalzrak/releases/tags/${releaseTag}`
   const apiRequestConfig: AxiosRequestConfig = {
     headers: { Accept: 'application/vnd.github.v3+json' },
     ...(mixedPort != 0 && {
